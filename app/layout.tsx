@@ -18,7 +18,7 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 })
 
-const metadata:Metadata = {
+export const metadata:Metadata = {
   title: "MeetingMind - AI Meeting Notes for Productive Teams",
   description:
     "MeetingMind is an AI-powered meeting assistant that automatically generates accurate, actionable summaries of your meetings. Stay organized, aligned, and never miss a follow-up again.",
