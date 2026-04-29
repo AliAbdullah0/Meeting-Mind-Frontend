@@ -1,30 +1,32 @@
-import React from 'react'
+"use client"
 import { Button } from './ui/button'
-
+import { motion } from 'framer-motion'
 const Hero = () => {
   return (
     <div className="min-h-screen bg-secondary overflow-hidden">
       <div className="flex flex-col items-center text-center px-4 sm:px-6 pt-14 sm:pt-20 pb-0">
-
-        {/* Badge */}
         <div className="flex items-center gap-1.5 bg-gray-100 border border-gray-200 rounded-full px-4 py-1.5 text-xs text-gray-500 mb-6 tracking-wide">
           <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
           AI-powered · zero setup
         </div>
-
-        {/* Headline */}
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-normal tracking-tight text-gray-900 max-w-2xl leading-[1.1] mb-4 sm:mb-5">
-          Never take meeting<br />
-          notes <em className="italic text-primary">again.</em>
-        </h1>
-
-        {/* Subheading */}
+        
+        <motion.h1
+  initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
+  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+  transition={{
+  duration: 1,
+  delay: 0.2,
+  ease: "easeOut",
+}}
+  className="font-serif text-4xl sm:text-5xl md:text-7xl font-normal tracking-tight text-gray-900 max-w-2xl leading-[1.1] mb-4 sm:mb-5"
+>
+  Never take meeting<br />
+  notes <em className="italic text-primary">again.</em>
+</motion.h1>
         <p className="text-sm sm:text-base text-gray-500 font-light max-w-md leading-relaxed mb-7 sm:mb-9">
           Your AI agent joins every call, captures every decision, and delivers
           a clean summary before the call even ends.
         </p>
-
-        {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 mb-10 sm:mb-14 w-full sm:w-auto px-4 sm:px-0">
           <Button className="bg-primary text-sm font-medium px-6 py-2.5 rounded-lg w-full sm:w-auto">
             Get started free
@@ -36,11 +38,7 @@ const Hero = () => {
             See how it works →
           </Button>
         </div>
-
-        {/* App preview */}
         <div className="w-full md:max-w-6xl max-w-3xl mx-auto rounded-t-2xl border border-b-0 border-gray-200 overflow-hidden shadow-[0_-4px_40px_rgba(0,0,0,0.06)]">
-
-          {/* Browser chrome */}
           <div className="flex items-center gap-2 px-4 py-2.5 bg-gray-50 border-b border-gray-200">
             <span className="w-2.5 h-2.5 rounded-full bg-red-300" />
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-300" />
@@ -51,11 +49,7 @@ const Hero = () => {
               Recording
             </div>
           </div>
-
-          {/* Dashboard body */}
           <div className="flex flex-col sm:grid sm:grid-cols-[180px_1fr] min-h-[340px] bg-white">
-
-            {/* Sidebar — hidden on mobile, visible sm+ */}
             <div className="hidden sm:flex border-r border-gray-100 p-4 flex-col gap-1">
               <p className="text-[10px] uppercase tracking-widest text-gray-400 px-2 mt-2 mb-1">Workspace</p>
               {['Dashboard', 'All meetings', 'Recordings'].map((item, i) => (
@@ -75,11 +69,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-
-            {/* Main area */}
             <div className="p-4 sm:p-5 flex flex-col gap-3">
-
-              {/* Stats — 1 col on mobile, 3 on sm+ */}
               <div className="grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-3 gap-2">
                 {[
                   { label: 'Meetings this week', val: '14', delta: '↑ 3 vs last week' },
@@ -93,8 +83,6 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
-
-              {/* Meeting card */}
               <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
                 <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                   <p className="text-[13px] font-medium text-gray-800">Q2 Product Roadmap Review</p>
