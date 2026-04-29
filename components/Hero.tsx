@@ -76,7 +76,7 @@ const Hero = () => {
                   { label: 'Hours saved', val: '6.2', delta: '↑ 1.4 hrs' },
                   { label: 'Action items', val: '31', delta: '12 completed' },
                 ].map((s) => (
-                  <div key={s.label} className="bg-white border border-gray-100 rounded-lg p-3">
+                  <div key={s.label} className="bg-white hover:bg-accent transition-colors border border-gray-100 rounded-lg p-3">
                     <p className="text-[10px] text-gray-400 mb-1">{s.label}</p>
                     <p className="text-xl font-medium text-gray-900">{s.val}</p>
                     <p className="text-[10px] text-emerald-600">{s.delta}</p>
