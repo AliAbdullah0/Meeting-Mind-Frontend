@@ -55,8 +55,8 @@ const Hero = () => {
               {['Dashboard', 'All meetings', 'Recordings'].map((item, i) => (
                 <div
                   key={item}
-                  className={`text-[13px] px-2.5 py-1.5 rounded-md cursor-pointer ${
-                    i === 0 ? 'bg-blue-50 text-blue-700 font-medium' : 'text-gray-500'
+                  className={`text-[13px] px-2.5 py-1.5 rounded-md cursor-pointer  ${
+                    i === 0 ? 'bg-blue-50 text-blue-700 hover font-medium' : 'text-gray-500 hover:bg-primary hover:text-white transition-colors'
                   }`}
                 >
                   {item}
