@@ -36,10 +36,8 @@ export default function RootLayout({
       className={cn("antialiased", fontSans.variable, fontMono.variable, "font-serif", notoSerif.variable)}
     >
       <body className="bg-accent">
-        <ThemeProvider>
           <Navbar/>
           {children}
-          </ThemeProvider>
       </body>
     </html>
   )
