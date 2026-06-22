@@ -10,8 +10,8 @@ import Script from 'next/script';
 export default function Chatbot() {
   return (
     <Script
-      src="http://localhost:3000/api/widget"
-      data-bot-id="4f647aa8-ceb2-4f7b-b947-e0852a92186f"
+      src="https://clay-bot-ai.vercel.app/api/widget"
+      data-bot-id="8c58810c-c5b9-40d6-b354-de41d95700da"
       strategy="afterInteractive"
     />
   );
