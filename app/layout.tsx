@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import { Metadata } from "next";
 import Script from 'next/script';
 
-export default function Chatbot() {
+export function Chatbot() {
   return (
     <Script
       src="https://clay-bot-ai.vercel.app/api/widget"
