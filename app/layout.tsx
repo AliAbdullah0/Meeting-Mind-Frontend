@@ -49,6 +49,7 @@ export default function RootLayout({
     >
       <body className="bg-accent">
           <Navbar/>
+          <Chatbot />
           {children}
       </body>
     </html>
